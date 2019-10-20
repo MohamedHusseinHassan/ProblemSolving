@@ -7,11 +7,15 @@ public class MergSortedArrays {
 		int[] firstArray = { 1, 4, 5, 6, 7, 8, 9 };
 		int[] secondArray = { 2, 3, 10, 11 };
 
-		merge(firstArray, secondArray);
+		int[] mergedArray=merge(firstArray, secondArray);
+		
+		for (int n = 0; n < mergedArray.length; n++) {
+			System.out.print(mergedArray[n] + " ");
+		}
 
 	}
 
-	private static void merge(int[] firstArray, int[] secondArray) {
+	private static int[] merge(int[] firstArray, int[] secondArray) {
 
 		int outputArraySize = firstArray.length + secondArray.length;
 
@@ -48,10 +52,8 @@ public class MergSortedArrays {
 			j++;
 			k++;
 		}
-
-		for (int n = 0; n < outputArray.length; n++) {
-			System.out.print(outputArray[n] + " ");
-		}
-
+		
+		return outputArray;
+		
 	}
 }
